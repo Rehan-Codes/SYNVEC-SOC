@@ -1,0 +1,49 @@
+G8 physical UART regression — recorded console excerpt, 2026-10-29
+Transcribed from the submitted terminal output; the original on-PC log was not available for this package.
+PWM electrical measurements were performed separately after this UART regression.
+
+G8 FULL SYSTEM PHYSICAL REGRESSION START
+G7 programmed-image source SHA256: A6245E7D94D446CAB67EF99B373B5FB1B8A6EA2861557C401C4E4040C381CCE1
+UART: COM8 115200 8N1; input pacing: 20 ms/byte
+Verify the Basys 3 is still loaded with G7, then press/release BTNC once.
+Press ENTER after the single initial CPU reset:
+UART OPEN PASS: COM8
+PASS [01] Initial SoC ID: TX=1, RX=1, exact bytes
+PASS [02] Initial LED read: TX=1, RX=1, exact bytes
+PASS [03] Set LED A5: TX=2, RX=1, exact bytes
+PASS [04] Read LED A5: TX=1, RX=1, exact bytes
+PASS [05] PWM preset 1 ACK (NOT waveform verification): TX=2, RX=1, exact bytes
+PASS [06] Matrix case 0: TX=65, RX=65, exact bytes
+Matrix 0 C[0,:] = [23, -32, 14, -25]
+Matrix 0 C[1,:] = [63, -76, 26, -45]
+Matrix 0 C[2,:] = [103, -120, 38, -65]
+Matrix 0 C[3,:] = [143, -164, 50, -85]
+PASS [07] PWM preset 2 ACK (NOT waveform verification): TX=2, RX=1, exact bytes
+PASS [08] Matrix case 1: TX=65, RX=65, exact bytes
+Matrix 1 C[0,:] = [131072, 2147385346, 1328233113, -672883112]
+Matrix 1 C[1,:] = [-131070, -2147450879, -1328228112, 672878113]
+Matrix 1 C[2,:] = [1, -2147450879, -163802232, 163867768]
+Matrix 1 C[3,:] = [1483482473, 845433712, 1163090000, -805070000]
+PASS [09] Unknown opcode NAK: TX=1, RX=1, exact bytes
+PASS [10] PWM preset 3 ACK (NOT waveform verification): TX=2, RX=1, exact bytes
+PASS [11] Matrix case 2: TX=65, RX=65, exact bytes
+Matrix 2 C[0,:] = [17, -18, 19, -20]
+Matrix 2 C[1,:] = [-21, 22, -23, 24]
+Matrix 2 C[2,:] = [25, -26, 27, -28]
+Matrix 2 C[3,:] = [-29, 30, -31, 32]
+PASS [12] Invalid PWM profile NAK: TX=2, RX=1, exact bytes
+PASS [13] Read preserved LED A5: TX=1, RX=1, exact bytes
+PASS [14] SoC ID after matrices: TX=1, RX=1, exact bytes
+PASS [15] PWM disable ACK: TX=2, RX=1, exact bytes
+PASS [16] Set LED 3C: TX=2, RX=1, exact bytes
+PASS [17] Read LED 3C: TX=1, RX=1, exact bytes
+PASS [18] Unknown opcode 00 NAK: TX=1, RX=1, exact bytes
+PASS [19] Final SoC ID: TX=1, RX=1, exact bytes
+
+G8 FULL SYSTEM PHYSICAL REGRESSION PASS
+Transactions: 19/19 PASS (single reset, no interleaved payloads)
+Matrix results: 48/48 PASS (three matrix cases)
+UART TX bytes: 218; UART RX bytes: 211
+LED, ID, PWM command ACK/NAK and unknown-opcode regression: PASS
+PWM electrical waveform remeasurement under G7 image: STILL PENDING
+System verification limitations: fixed vectors; input paced; no malformed/truncated-frame recovery test

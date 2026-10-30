@@ -1,0 +1,16 @@
+G7 PHYSICAL MATRIX TEST START
+Case: 1
+Bitstream SHA256: A6245E7D94D446CAB67EF99B373B5FB1B8A6EA2861557C401C4E4040C381CCE1
+Host reference: four independent signed16 multiply-accumulate terms per element, low signed32 bits
+Known-answer vector: 16/16 PASS
+COM8 OPEN PASS
+Sending 0x4D + 64 operand bytes, with 20 ms pacing per byte...
+UART REQUEST SENT: 65/65 bytes
+UART RESPONSE: 65/65 bytes, ACK 0x06 PASS
+C[0,:] = [131072, 2147385346, 1328233113, -672883112]
+C[1,:] = [-131070, -2147450879, -1328228112, 672878113]
+C[2,:] = [1, -2147450879, -163802232, 163867768]
+C[3,:] = [1483482473, 845433712, 1163090000, -805070000]
+G7 PHYSICAL MATRIX CASE 1 PASS: 16/16 computed results
+Reference check: independent arithmetic + fixed known-answer vector
+UART reply: 65/65 exact, no trailing bytes

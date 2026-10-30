@@ -1,0 +1,9 @@
+G8 physical PWM measurements — Digilent Analog Discovery 3 / WaveForms
+Board: Digilent Basys 3, G7-verified FPGA image, JA1 PWM output
+Frequency       Period       Positive duty     UART ACK
+1.0000 kHz      0.99999 ms   25.001%           0x06
+4.0001 kHz      249.99 us    50.000%           0x06
+8.0002 kHz      125.00 us    75.000%           0x06
+All three measured on 2026-10-29; see oscilloscope/ for original scope captures.
+The UART ACKs confirm command acceptance, not the electrical waveform.
+The 1 kHz ACK is from the submitted console output; 4 and 8 kHz ACKs also have screenshots in the source evidence archive.

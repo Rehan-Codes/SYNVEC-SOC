@@ -1,0 +1,6 @@
+Time resolution is 1 ps
+G7 MATRIX CASE PASS: case=0, 32 signed16 operands, 16 signed32 result words, UART pin byte order verified
+G7 MATRIX CASE PASS: case=1, 32 signed16 operands, 16 signed32 result words, UART pin byte order verified
+G7 STAGE1 CPU MATRIX PASS: 2 matrices, 64 signed16 operand writes, 32 signed32 result reads, 136 independently checked UART TX pin bytes, 139 UART RX bytes, G6 PWM/LED/ID regression, retirements=1034518, bus_errors=0
+$finish called at time : 24124580 ns : File "tb_g7_cpu_matrix.sv" Line 217
+INFO: xsimkernel Simulation Memory Usage: 20144 KB (Peak: 20144 KB), Simulation CPU Usage: 45139 ms

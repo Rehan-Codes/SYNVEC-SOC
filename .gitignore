@@ -1,0 +1,13 @@
+build/
+.Xil/
+*.jou
+*.log
+*.wdb
+*.pb
+*.str
+*.backup.jou
+__pycache__/
+*.pyc
+.DS_Store
+
+!results/**/*.log
